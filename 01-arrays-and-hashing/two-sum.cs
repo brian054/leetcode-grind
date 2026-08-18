@@ -28,6 +28,8 @@ public class Solution {
             HashMap[nums[i]] = i;
         }
         // We're guarenteed an answer so this should not occur.
-        return [-1, -1];
+        //return [-1, -1];
+        // More explicit, 
+        throw new InvalidOperationException("No two-sum solution found.");
     }
 }
