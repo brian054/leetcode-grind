@@ -4,6 +4,7 @@
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
         Dictionary<int, int> HashMap = new();
+        // NOTE: You could use a HashSet<int>
 
         foreach(var number in nums) {
             // add to HM
@@ -15,4 +16,20 @@ public class Solution {
         }
         return false; 
     }
+    
+    // HashSet solution
+    public bool ContainsDuplicate(int[] nums) {
+        HashSet<int> hs = new();
+        
+        foreach (var number in nums) {
+            if (hs.Contains(number)) {
+                return true;
+            } else {
+                hs.Add(number);
+            }
+        }
+        return false;
+    }
 }
+
+
